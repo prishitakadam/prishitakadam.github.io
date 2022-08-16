@@ -172,14 +172,23 @@ section#contact{
 
 /* SECTION : CONTACT*/
 
+.inner-contact{
+    /* border: solid white; */
+    position: absolute;
+    height: 50%;
+    width: 100%;
+}
+
 .contact-info{
+    /* border: 3px solid white; */
     position: relative;
     display: flex;
     justify-content: center;
     align-items: top;
     height: 30%;
     width: 100%;
-    /* border: 3px solid white;  */
+    /* margin-top: 12%; */
+    transform: translate(0%, 130%)
 }
 
 h5{
@@ -192,7 +201,7 @@ h5{
     /* border: 3px solid white; */
     position: absolute;
     display: flex;
-    margin-top: 7%;
+    margin-top: 5%;
     justify-content: center;
     height: 40%;
     width: 90%;
@@ -234,6 +243,7 @@ h5{
 
   /* CUTE DOG */
   .dog {
+    /* border: solid white; */
     position: absolute;
     top: 30%;
     width: 25vmin;

@@ -1,0 +1,70 @@
+/* SECTION : CONTACT*/
+.inner-contact{
+    /* border: solid white; */
+    position: absolute;
+    height: 50%;
+    width: 100%;
+}
+
+.contact-info{
+    /* border: 3px solid white; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 30%;
+    width: 100%;
+    /* margin-top: 12%; */
+    transform: translate(0%, 130%)
+}
+
+h5{
+    color :#fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.5vmin;
+}
+
+.social-media{
+    /* border: 3px solid white; */
+    position: absolute;
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    height: 40%;
+    width: 90%;
+}
+
+.social-media a{
+    padding-top: 1.5vmin;
+    font-size: 1.8vmin;
+    padding-left: 10%;
+    justify-content: center;
+}
+
+.fa{
+    position: relative;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(to right, black, black 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 300ms ease;
+}
+
+.fa:hover{
+    background-position: 0 100%;
+}
+
+.developed-by{
+   /* border: solid white; */
+   position: absolute;
+   bottom: 0;
+   color: white;
+   justify-content: center;
+   text-align: center;
+   width: 90%;
+   margin-left: 5%;
+}

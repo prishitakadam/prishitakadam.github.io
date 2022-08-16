@@ -1,0 +1,159 @@
+    .flex-parent {
+    position: relative;
+    /* border: solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 78%; }
+  
+  .input-flex-container {
+    /* border: solid white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vmin;
+    height: 20vmin;
+    /* max-width: 1000px; */
+    position: relative;
+    margin-top: -20%;
+    vertical-align: top;
+    z-index: 0; }
+  
+  .input {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 70%; }
+    .input:hover {
+      cursor: pointer; 
+      width: 25px;
+      height: 25px;
+      color: white;
+      transition: 400ms ease}
+    .input::before, .input::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: white;
+      width: 4vw;
+      height: 5px;
+      max-width: 50px; }
+    .input::before {
+      left: calc(-4vw + 12.5px); }
+    .input::after {
+      right: calc(-4vw + 12.5px); }
+    .input.active {
+      background-color: white; 
+      }
+      .input.active::before {
+        background-color: white; }
+      .input.active::after {
+        background-color: #2C3E50; }
+      .input.active span {
+        font-weight: 700; 
+        color: white;}
+        .input.active span::before {
+          font-size: 1.2vmin; }
+        .input.active span::after {
+            font-size: 1.6vmin; }
+    .input.active ~ .input, .input.active ~ .input::before, .input.active ~ .input::after {
+      background-color: #2C3E50; }
+    .input span {
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      top: 20%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      visibility: hidden; }
+      .input span::before, .input span::after {
+        visibility: visible;
+        position: absolute;
+        left: 50%; }
+      .input span::after {
+        content: attr(data-year);
+        top: 25px;
+        transform: translateX(-50%);
+        font-size: 14px; }
+      .input span::before {
+        content: attr(data-info);
+        top: -70px;
+        width: 70px;
+        transform: translateX(-5px) rotateZ(-45deg);
+        font-size: 1.2vmin;
+        text-indent: -10px; }
+  
+  .description-flex-container {
+    /* border: solid white; */
+    /* position: relative; */
+    color: white;
+    width: 60vmin;
+    font-weight: 400;
+    font-size: 1.6vmin;
+    margin-top: 2%;
+    max-width: 1000px; }
+    .description-flex-container p {
+      margin-top: 0;
+      display: none; }
+      .description-flex-container p.active {
+        display: block; }
+  
+  @media (min-width: 1250px) {
+    .input::before {
+      left: -37.5px; }
+    .input::after {
+      right: -37.5px; } }
+  
+  @media (max-width: 850px) {
+    .input {
+      width: 17px;
+      height: 17px; }
+      .input::before, .input::after {
+        height: 3px; }
+      .input::before {
+        left: calc(-4vw + 8.5px); }
+      .input::after {
+        right: calc(-4vw + 8.5px); } }
+  
+  @media (max-width: 600px) {
+    .flex-parent {
+      justify-content: initial; }
+    .input-flex-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      margin-top: 15vh; }
+    .input {
+      width: 60px;
+      height: 60px;
+      margin: 0 10px 50px;
+      background-color: #2C3E50; }
+      .input::before, .input::after {
+        content: none; }
+      .input span {
+        width: 100%;
+        height: 100%;
+        display: block; }
+        .input span::before {
+          top: calc(100% + 5px);
+          transform: translateX(-50%);
+          text-indent: 0;
+          text-align: center; }
+        .input span::after {
+          top: 50%;
+          transform: translate(-50%, -50%);
+          color: #ECF0F1; }
+    .description-flex-container {
+      margin-top: 30px;
+      text-align: center; } }
+  
+  @media (max-width: 400px) {
+    body {
+      min-height: 950px; } }

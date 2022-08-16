@@ -1,0 +1,47 @@
+/* SECTION : ABOUT*/
+.about-main{
+    /* border: solid red; */
+    width: 100%;
+    height: 75vh;
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.about-main-fit{
+    grid-template-columns: repeat(auto-fill, 870px);
+}
+.about-me{
+    border: solid white;
+}
+
+.experience{
+    border: solid white;
+    position: relative;
+}
+
+.about-me-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+}
+
+.my-image{
+    /* border: solid white; */
+}
+
+.my-info{
+    /* border: solid white; */
+}
+
+.my-bio{
+    /* border: solid white; */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.quote{
+    /* border: solid green; */
+    position: relative;
+    margin-top: 2%;
+    height: 20%;
+}

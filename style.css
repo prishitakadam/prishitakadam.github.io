@@ -171,24 +171,67 @@ section#contact{
 }
 
 /* SECTION : CONTACT*/
+
+.contact-info{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 30%;
+    width: 100%;
+    /* border: 3px solid white;  */
+}
+
 h5{
     color :#fff;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 2.5em;
-    line-height: 10px;
+    font-size: 2.5vw;
+    /* line-height: 10px;
     text-align: center; 
     align-items: center;
-    margin-top: auto;
+    margin-top: auto; */
 
 }
 
-.inner-contact{
+.social-media{
+    /* border: 3px solid white; */
+    position: absolute;
+    display: flex;
+    margin-top: 7%;
+    justify-content: center;
+    height: 40%;
+    width: 90%;
+}
+
+.social-media a{
+    font-size: 1.2vw;
+    padding-left: 10%;
+    justify-content: center;
+}
+
+.fa{
+    position: relative;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(to right, black, black 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 300ms ease;
+}
+
+.fa:hover{
+    background-position: 0 100%;
+}
+
+/* .inner-contact{
     height: 250px;
     width: 70%;
     background-size: contain;
     margin: auto;
     align-items: center;
-    /* margin-top: 20%; */
 
 }
 
@@ -225,7 +268,7 @@ h5{
 
   .fa:hover{
     background-position: 0 100%;
-  }
+  } */
 
   .developed-by{
     color: #fff;

@@ -1,192 +1,564 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Prishita Kadam</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/about-section.css">
-        <link rel="stylesheet" href="css/timeline.css">
-        <link rel="stylesheet" href="css/contact-section.css">
-        <link rel="stylesheet" href="css/dog.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-    </head>
-
-    <body>
-
-        <nav class='sticky-navbar'>
-        <div class = "div-nav">
-            <a href="#about-me">ABOUT</a>
-            <a href="#project">PROJECTS</a>
-            <a href="#intro-section" style="font-size: 35px; margin-top: 5px">&#10070;</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#contact">CONTACT</a>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prishita Kadam | Reliable Infrastructure Engineer</title>
+    <meta
+      name="description"
+      content="Prishita Kadam builds reliable infrastructure, observability platforms, and orchestration systems for AI hardware, GPU systems, and server platforms."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body data-page="home">
+    <header class="pixel-topbar">
+      <div class="shell pixel-topbar__inner">
+        <a class="pixel-brand" href="index.html">PrishitaOS</a>
+        <nav class="pixel-nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home.exe</a>
+          <a href="tech-blog.html" data-nav="tech">Tech.exe</a>
+          <a href="reading-blog.html" data-nav="reading">Reading.exe</a>
+          <a href="#contact">Contact.exe</a>
         </nav>
-        <div class="panel">
-            <section class="container" id="intro-section">
-                <div class="intro-div">
-                        <p>I am</p>
-                    <svg width="auto" height="72" viewBox="0 0 839 72" fill="none" xmlns="http://www.w3.org/2000/svg" id="amazing">
-                        <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.408005" y="0.839996" width="838" height="72" fill="black">
-                        <rect fill="white" x="0.408005" y="0.839996" width="838" height="72"/>
-                        <path d="M28.768 2.8C32.352 2.8 35.648 3.728 38.656 5.584C41.664 7.376 44.064 9.84 45.856 12.976C47.648 16.048 48.544 19.536 48.544 23.44C48.544 27.28 47.648 30.8 45.856 34C44.064 37.136 41.664 39.632 38.656 41.488C35.648 43.344 32.352 44.272 28.768 44.272H11.776V70H1.408V2.8H28.768ZM28.576 34.288C30.304 34.288 31.872 33.808 33.28 32.848C34.688 31.824 35.808 30.512 36.64 28.912C37.536 27.248 37.984 25.424 37.984 23.44C37.984 20.432 37.056 17.904 35.2 15.856C33.344 13.808 31.136 12.784 28.576 12.784H11.776V34.288H28.576Z"/>
-                        <path d="M112.076 24.208C112.076 28.24 110.86 31.984 108.428 35.44C106.06 38.896 102.956 41.456 99.1158 43.12L114.764 70.096L102.188 70L87.9798 44.752H72.6198V70H62.2518V2.8H90.8598C94.3798 2.8 97.7398 3.664 100.94 5.392C104.204 7.12 106.86 9.584 108.908 12.784C111.02 15.984 112.076 19.792 112.076 24.208ZM89.1318 12.784H72.6198V34.768H91.8197C94.8917 34.768 97.2598 33.68 98.9238 31.504C100.652 29.328 101.516 26.864 101.516 24.112C101.516 20.592 100.3 17.84 97.8678 15.856C95.4358 13.808 92.5238 12.784 89.1318 12.784Z"/>
-                        <path d="M158.57 70H126.506V60.4H137.354V12.4H126.506V2.8H158.57V12.4H147.722V60.4H158.57V70Z"/>
-                        <path d="M177.342 49.744C179.966 53.52 182.685 56.464 185.501 58.576C188.381 60.624 192.093 61.648 196.637 61.648C198.813 61.648 200.894 61.296 202.878 60.592C204.862 59.888 206.493 58.864 207.773 57.52C209.053 56.176 209.693 54.576 209.693 52.72C209.693 49.52 208.318 47.024 205.566 45.232C202.878 43.44 199.07 42.064 194.142 41.104C187.87 39.824 182.877 37.616 179.165 34.48C175.453 31.28 173.598 26.672 173.598 20.656C173.598 16.816 174.654 13.488 176.766 10.672C178.942 7.856 181.79 5.67999 185.31 4.144C188.83 2.608 192.638 1.84 196.734 1.84C202.046 1.84 206.622 2.864 210.462 4.912C214.302 6.96 217.31 9.872 219.486 13.648L212.189 20.848C210.461 17.968 208.285 15.632 205.661 13.84C203.037 12.048 199.965 11.152 196.445 11.152C192.925 11.152 189.95 11.984 187.518 13.648C185.15 15.248 183.965 17.488 183.965 20.368C183.965 23.632 185.214 26.032 187.71 27.568C190.27 29.04 193.63 30.224 197.79 31.12C201.566 31.888 205.15 33.072 208.542 34.672C211.934 36.272 214.686 38.352 216.798 40.912C218.973 43.408 220.061 46.448 220.061 50.032C220.061 56.432 217.886 61.52 213.534 65.296C209.182 69.072 203.197 70.96 195.581 70.96C190.397 70.96 185.662 69.936 181.374 67.888C177.15 65.84 173.438 62.512 170.238 57.904L177.342 49.744Z"/>
-                        <path d="M245.12 2.8V31.504H278.624V2.8H288.992V70H278.624V41.488H245.12V70H234.752V2.8H245.12Z"/>
-                        <path d="M337.351 70H305.287V60.4H316.135V12.4H305.287V2.8H337.351V12.4H326.503V60.4H337.351V70Z"/>
-                        <path d="M366.395 70V12.784H347.579V2.8H396.155V12.784H376.763V70H366.395Z"/>
-                        <path d="M448.51 70L442.174 53.296H414.046L407.71 70H397.15L423.166 2.8H433.726L459.55 70H448.51ZM422.974 29.872L417.886 43.312H438.43L433.15 29.488C432.318 27.248 431.486 24.848 430.654 22.288C429.822 19.664 428.99 17.04 428.158 14.416C427.262 17.104 426.366 19.792 425.47 22.48C424.638 25.168 423.806 27.632 422.974 29.872Z"/>
-                        <path d="M508.651 70H498.283V2.8H508.651V35.728L541.579 2.8H555.211L526.219 30.928L555.787 70H542.827L518.923 38.032L508.651 48.016V70Z"/>
-                        <path d="M612.947 70L606.611 53.296H578.484L572.148 70H561.588L587.604 2.8H598.163L623.987 70H612.947ZM587.411 29.872L582.323 43.312H602.867L597.588 29.488C596.756 27.248 595.923 24.848 595.091 22.288C594.259 19.664 593.428 17.04 592.596 14.416C591.7 17.104 590.804 19.792 589.908 22.48C589.076 25.168 588.243 27.632 587.411 29.872Z"/>
-                        <path d="M662.118 2.8C667.302 2.8 671.846 3.696 675.75 5.488C679.718 7.216 683.014 9.64799 685.638 12.784C688.262 15.856 690.246 19.44 691.59 23.536C692.934 27.568 693.606 31.856 693.606 36.4C693.606 42.544 692.422 48.176 690.054 53.296C687.686 58.352 684.166 62.416 679.494 65.488C674.822 68.496 669.03 70 662.118 70H635.814V2.8H662.118ZM661.638 60.016C666.694 60.016 670.79 58.96 673.926 56.848C677.062 54.672 679.366 51.792 680.838 48.208C682.31 44.624 683.046 40.688 683.046 36.4C683.046 32.176 682.31 28.272 680.838 24.688C679.366 21.104 677.062 18.224 673.926 16.048C670.79 13.872 666.694 12.784 661.638 12.784H646.182V60.016H661.638Z"/>
-                        <path d="M750.104 70L743.768 53.296H715.64L709.304 70H698.744L724.76 2.8H735.32L761.144 70H750.104ZM724.568 29.872L719.48 43.312H740.024L734.744 29.488C733.912 27.248 733.08 24.848 732.248 22.288C731.416 19.664 730.584 17.04 729.752 14.416C728.856 17.104 727.96 19.792 727.064 22.48C726.232 25.168 725.4 27.632 724.568 29.872Z"/>
-                        <path d="M783.146 2.8L805.13 38.608L827.498 2.8H837.098V70H826.731V42.448C826.731 38.416 826.794 34.608 826.922 31.024C827.114 27.376 827.402 23.76 827.786 20.176L808.01 50.704H801.674L782.378 20.272C782.762 23.856 783.018 27.44 783.146 31.024C783.274 34.608 783.338 38.416 783.338 42.448V70H772.971V2.8H783.146Z"/>
-                        </mask>
-                        <path d="M28.768 2.8C32.352 2.8 35.648 3.728 38.656 5.584C41.664 7.376 44.064 9.84 45.856 12.976C47.648 16.048 48.544 19.536 48.544 23.44C48.544 27.28 47.648 30.8 45.856 34C44.064 37.136 41.664 39.632 38.656 41.488C35.648 43.344 32.352 44.272 28.768 44.272H11.776V70H1.408V2.8H28.768ZM28.576 34.288C30.304 34.288 31.872 33.808 33.28 32.848C34.688 31.824 35.808 30.512 36.64 28.912C37.536 27.248 37.984 25.424 37.984 23.44C37.984 20.432 37.056 17.904 35.2 15.856C33.344 13.808 31.136 12.784 28.576 12.784H11.776V34.288H28.576Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M112.076 24.208C112.076 28.24 110.86 31.984 108.428 35.44C106.06 38.896 102.956 41.456 99.1158 43.12L114.764 70.096L102.188 70L87.9798 44.752H72.6198V70H62.2518V2.8H90.8598C94.3798 2.8 97.7398 3.664 100.94 5.392C104.204 7.12 106.86 9.584 108.908 12.784C111.02 15.984 112.076 19.792 112.076 24.208ZM89.1318 12.784H72.6198V34.768H91.8197C94.8917 34.768 97.2598 33.68 98.9238 31.504C100.652 29.328 101.516 26.864 101.516 24.112C101.516 20.592 100.3 17.84 97.8678 15.856C95.4358 13.808 92.5238 12.784 89.1318 12.784Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M158.57 70H126.506V60.4H137.354V12.4H126.506V2.8H158.57V12.4H147.722V60.4H158.57V70Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M177.342 49.744C179.966 53.52 182.685 56.464 185.501 58.576C188.381 60.624 192.093 61.648 196.637 61.648C198.813 61.648 200.894 61.296 202.878 60.592C204.862 59.888 206.493 58.864 207.773 57.52C209.053 56.176 209.693 54.576 209.693 52.72C209.693 49.52 208.318 47.024 205.566 45.232C202.878 43.44 199.07 42.064 194.142 41.104C187.87 39.824 182.877 37.616 179.165 34.48C175.453 31.28 173.598 26.672 173.598 20.656C173.598 16.816 174.654 13.488 176.766 10.672C178.942 7.856 181.79 5.67999 185.31 4.144C188.83 2.608 192.638 1.84 196.734 1.84C202.046 1.84 206.622 2.864 210.462 4.912C214.302 6.96 217.31 9.872 219.486 13.648L212.189 20.848C210.461 17.968 208.285 15.632 205.661 13.84C203.037 12.048 199.965 11.152 196.445 11.152C192.925 11.152 189.95 11.984 187.518 13.648C185.15 15.248 183.965 17.488 183.965 20.368C183.965 23.632 185.214 26.032 187.71 27.568C190.27 29.04 193.63 30.224 197.79 31.12C201.566 31.888 205.15 33.072 208.542 34.672C211.934 36.272 214.686 38.352 216.798 40.912C218.973 43.408 220.061 46.448 220.061 50.032C220.061 56.432 217.886 61.52 213.534 65.296C209.182 69.072 203.197 70.96 195.581 70.96C190.397 70.96 185.662 69.936 181.374 67.888C177.15 65.84 173.438 62.512 170.238 57.904L177.342 49.744Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M245.12 2.8V31.504H278.624V2.8H288.992V70H278.624V41.488H245.12V70H234.752V2.8H245.12Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M337.351 70H305.287V60.4H316.135V12.4H305.287V2.8H337.351V12.4H326.503V60.4H337.351V70Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M366.395 70V12.784H347.579V2.8H396.155V12.784H376.763V70H366.395Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M448.51 70L442.174 53.296H414.046L407.71 70H397.15L423.166 2.8H433.726L459.55 70H448.51ZM422.974 29.872L417.886 43.312H438.43L433.15 29.488C432.318 27.248 431.486 24.848 430.654 22.288C429.822 19.664 428.99 17.04 428.158 14.416C427.262 17.104 426.366 19.792 425.47 22.48C424.638 25.168 423.806 27.632 422.974 29.872Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M508.651 70H498.283V2.8H508.651V35.728L541.579 2.8H555.211L526.219 30.928L555.787 70H542.827L518.923 38.032L508.651 48.016V70Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M612.947 70L606.611 53.296H578.484L572.148 70H561.588L587.604 2.8H598.163L623.987 70H612.947ZM587.411 29.872L582.323 43.312H602.867L597.588 29.488C596.756 27.248 595.923 24.848 595.091 22.288C594.259 19.664 593.428 17.04 592.596 14.416C591.7 17.104 590.804 19.792 589.908 22.48C589.076 25.168 588.243 27.632 587.411 29.872Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M662.118 2.8C667.302 2.8 671.846 3.696 675.75 5.488C679.718 7.216 683.014 9.64799 685.638 12.784C688.262 15.856 690.246 19.44 691.59 23.536C692.934 27.568 693.606 31.856 693.606 36.4C693.606 42.544 692.422 48.176 690.054 53.296C687.686 58.352 684.166 62.416 679.494 65.488C674.822 68.496 669.03 70 662.118 70H635.814V2.8H662.118ZM661.638 60.016C666.694 60.016 670.79 58.96 673.926 56.848C677.062 54.672 679.366 51.792 680.838 48.208C682.31 44.624 683.046 40.688 683.046 36.4C683.046 32.176 682.31 28.272 680.838 24.688C679.366 21.104 677.062 18.224 673.926 16.048C670.79 13.872 666.694 12.784 661.638 12.784H646.182V60.016H661.638Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M750.104 70L743.768 53.296H715.64L709.304 70H698.744L724.76 2.8H735.32L761.144 70H750.104ZM724.568 29.872L719.48 43.312H740.024L734.744 29.488C733.912 27.248 733.08 24.848 732.248 22.288C731.416 19.664 730.584 17.04 729.752 14.416C728.856 17.104 727.96 19.792 727.064 22.48C726.232 25.168 725.4 27.632 724.568 29.872Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                        <path d="M783.146 2.8L805.13 38.608L827.498 2.8H837.098V70H826.731V42.448C826.731 38.416 826.794 34.608 826.922 31.024C827.114 27.376 827.402 23.76 827.786 20.176L808.01 50.704H801.674L782.378 20.272C782.762 23.856 783.018 27.44 783.146 31.024C783.274 34.608 783.338 38.416 783.338 42.448V70H772.971V2.8H783.146Z" stroke="white" stroke-width="5" mask="url(#path-1-outside-1)"/>
-                    </svg>  
+      </div>
+    </header>
+
+    <main class="pixel-desktop">
+      <section class="desktop-stage section-reveal">
+        <div class="shell desktop-board">
+          <article class="window window--hero window--hero-main">
+            <div class="window__bar">
+              <span>about_prishita.exe</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">software engineer • reliable infrastructure builder</p>
+              <h1>Hi, I’m Prishita. I build reliable infrastructure that helps AI hardware and GPU server platforms feel steadier, clearer, and easier to trust.</h1>
+              <p class="pixel-copy">
+                I’m a software engineer who builds infrastructure services, orchestration systems,
+                observability platforms, and debugging workflows for complex AI hardware and server
+                environments. I care a lot about deep technical work, and I care just as much
+                about reducing friction for the people doing it.
+              </p>
+              <div class="pixel-actions">
+                <a class="pixel-button pixel-button--dark" href="#oracle-window">Open current work</a>
+                <a class="pixel-button pixel-button--light" href="tech-blog.html">Open tech blog</a>
+              </div>
+            </div>
+          </article>
+
+          <div class="window-stack window-stack--portrait">
+            <article class="window window--cat window--portrait">
+              <div class="window__bar">
+                <span>how_i_show_up.txt</span>
+                <div class="window__controls" aria-label="Window controls">
+                  <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                  <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                  <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
                 </div>
-            </section>
-
-            <section class="container" id="about-me">
-                <div class="about-main about-main-fit">
-                    <div class="about-me about-me-grid"> 
-                        <div class="my-image">
-
-                        </div>
-                        <div class="my-info">
-
-                        </div>
-                        <div class="my-bio">
-
-                        </div>
-                    </div>
-                    <div class="experience"> 
-                        <div class="quote">
-
-                        </div>
-                        <div class="flex-parent">
-                            <div class="input-flex-container">
-                                <div class="input">
-                                    <span data-year="2017" data-info="Scholarship Granted"></span>
-                                </div>
-                                <div class="input">
-                                    <span data-year="2019" data-info="Software Engineer Intern"></span>
-                                </div>
-                                <div class="input">
-                                    <span data-year="2020" data-info="Undergrad Research Assistant"></span>
-                                </div>
-                                <div class="input">
-                                    <span data-year="2021" data-info="Research Paper Published"></span>
-                                </div>
-                                <div class="input">
-                                    <span data-year="2021" data-info="Research Assistant"></span>
-                                </div>
-                                <div class="input">
-                                    <span data-year="2022" data-info="Teaching Assistant"></span>
-                                </div>
-                                <div class="input">
-                                    <span data-year="2022" data-info="Software Engineer Intern"></span>
-                                </div>
-                                <div class="input active">
-                                    <span data-year="2022" data-info="Teaching Assistant"></span>
-                                </div>
-                            </div>
-                            <div class="description-flex-container">
-                                <p>Received Scholarship for Higher Education</p>
-                                <p>Software Engineer Intern at Capgemini</p>
-                                <p>Undergrad Research Assistant</p>
-                                <p>research Paper published</p>
-                                <p>Graduate Research Assistant</p>
-                                <p>Teaching Assistant for CS 251</p>
-                                <p>Software Engineer Intern at Oracle</p>
-                                <p class="active">Teaching Assistant for CS 251</p>
-                            </div>
-                        </div>
-                        <!-- <div style="position: absolute; bottom: 40px; right: 10px; font-size: 12px">
-                            <a href="https://codepen.io/cjl750/pen/XMyRoB" target="_blank">original version with slinky mobile menu</a></div>
-                        <div style="position: absolute; bottom: 15px; right: 10px; font-size: 12px">
-                            <a href="https://codepen.io/cjl750/pen/wdVxzV" target="_blank">alternate version with custom range input</a></div>
-                        <div style="position: absolute; bottom: 15px; left: 10px; font-size: 18px; font-weight: bold">
-                            <a href="https://codepen.io/cjl750/pen/MXvYmg" target="_blank">version 4: pure CSS!</a></div> -->
-                    </div>
+              </div>
+              <div class="window__body pixel-center pixel-cat-panel">
+                <div class="pixel-spirit pixel-spirit--one" aria-hidden="true"></div>
+                <div class="pixel-spirit pixel-spirit--two" aria-hidden="true"></div>
+                <div class="pixel-spirit pixel-spirit--three" aria-hidden="true"></div>
+                <div class="pixel-cat pixel-cat--sleepy">
+                  <div class="pixel-cat__ears"></div>
+                  <div class="pixel-cat__head"></div>
+                  <div class="pixel-cat__body"></div>
+                  <div class="pixel-cat__tail"></div>
                 </div>
-            </section>
+                <p class="pixel-caption">easygoing, kind, and very serious about making complex systems easier for other engineers to trust</p>
+              </div>
+            </article>
 
-            <section class="container" id="project"> </section>
-
-            <section class="container" id="skills"> </section>
-
-            <section class="container" id="contact">
-                <div class="inner-contact">
-                    <div class="dog">
-                        <div class="heart heart--1"></div>
-                        <div class="heart heart--2"></div>
-                        <div class="heart heart--3"></div>
-                        <div class="heart heart--4"></div>
-                        <div class="head">
-                                <div class="year year--left"></div>
-                                <div class="year year--right"></div>
-                                <div class="nose"></div>	
-                            <div class="face">
-                                <div class="eye eye--left"></div>
-                                <div class="eye eye--right"></div>
-                                <div class="mouth"></div>
-                            </div>
-                        </div>
-                        <div class="body">
-                            <div class="cheast"></div>
-                            <div class="back"></div>
-                            <div class="legs">
-                                <div class="legs__front legs__front--left"></div>
-                                <div class="legs__front legs__front--right"></div>
-                                <div class="legs__back legs__back--left"></div>
-                                <div class="legs__back legs__back--right"></div>
-                            </div>
-                            <div class="tail"></div>
-                        </div>
-                    </div>
-                    <div class="contact-info">
-                        <h5><b>Let's get connected!</b></h5>
-                        <div class="social-media">
-                            <a title="Linkedin" href="https://www.linkedin.com/in/prishitakadam/" style="margin-left: -10%;"><i class="fa fa-linkedin fa_custom fa-4x" id="linkedin"></i></a>
-                            <a title="GitHub" href="https://github.com/prishitakadam"><i class="fa fa-github fa-4x"></i></a>
-                            <a title="Mail" href="mailto:pkadam@purdue.edu"><i class="fa fa-envelope fa_custom fa-4x"></i></a>
-                            <a title="Instagram" href="https://www.instagram.com/itsprishitaa/"><i class="fa fa-instagram fa_custom fa-4x"></i></a>
-                        </div>
-                    </div>
+            <article class="window window--soft window--status">
+              <div class="window__bar">
+                <span>now_running.log</span>
+                <div class="window__controls" aria-label="Window controls">
+                  <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                  <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                  <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
                 </div>
-                <div class="developed-by">
-                    <p>&#169; Copyright <b>Prishita Kadam</b>. All Rights Reserved</p>
-                    <p>Designed by Prishita Kadam</p>
-                </div>
-            </section>
+              </div>
+              <div class="window__body">
+                <p class="pixel-label">Now running</p>
+                <ul class="pixel-list">
+                  <li>Building infrastructure used across 50+ AI hardware and server platforms.</li>
+                  <li>Designing orchestration systems that expanded execution capacity 5x.</li>
+                  <li>Building observability workflows that make failures faster to diagnose.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
 
+          <article class="window window--proof window--proof-panel">
+            <div class="window__bar">
+              <span>proof_points.dat</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">Proof points</p>
+              <div class="proof-grid">
+                <div class="proof-chip">
+                  <strong>50+</strong>
+                  <span>AI hardware and server platforms supported through infrastructure and qualification work</span>
+                </div>
+                <div class="proof-chip">
+                  <strong>20,000 -> 100,000</strong>
+                  <span>automated infrastructure test runs scaled per quarter</span>
+                </div>
+                <div class="proof-chip">
+                  <strong>5x</strong>
+                  <span>increase in execution capacity for new platform bring-up</span>
+                </div>
+                <div class="proof-chip">
+                  <strong>ICDE + IEEE</strong>
+                  <span>published research across systems engineering and applied machine learning</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="window window--list window--support">
+            <div class="window__bar">
+              <span>what_you_can_count_on.txt</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">What people can count on me for</p>
+              <ul class="pixel-list">
+                <li>I build infrastructure platforms that remove engineering toil.</li>
+                <li>I build observability systems that help people debug faster.</li>
+                <li>I improve reliability through cross-stack systems debugging.</li>
+                <li>I mentor peers thoughtfully and help unblock technical work.</li>
+                <li>I use AI thoughtfully to speed up engineering workflows and reduce repetitive work.</li>
+                <li>I explain hard technical ideas clearly and patiently.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="window window--terminal window--skills">
+            <div class="window__bar">
+              <span>skills_terminal.sh</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">Skills</p>
+              <div class="skills-panel">
+                <div class="skill-cluster">
+                  <h3>Languages</h3>
+                  <p>Python, C++, Java, JavaScript, SQL, Unix Shell</p>
+                </div>
+                <div class="skill-cluster">
+                  <h3>Backend / Infrastructure</h3>
+                  <p>FastAPI, SQLAlchemy, OpenSearch, REST APIs, Workflow Orchestration</p>
+                </div>
+                <div class="skill-cluster">
+                  <h3>Observability / Reliability</h3>
+                  <p>Prometheus, Grafana, Alertmanager, Telemetry Pipelines, Log Correlation, Alerting</p>
+                </div>
+                <div class="skill-cluster">
+                  <h3>Platform / Hardware Systems</h3>
+                  <p>BMC, OpenBMC, Redfish, BIOS, PCIe, RDMA, NVMe/TCP, Networking, Storage</p>
+                </div>
+                <div class="skill-cluster">
+                  <h3>Systems / Debugging</h3>
+                  <p>Linux, Distributed Systems, System Debugging, Performance Analysis, Root-Cause Analysis</p>
+                </div>
+                <div class="skill-cluster">
+                  <h3>Research</h3>
+                  <p>Memory Disaggregation, Databases, Machine Learning, Cross-Stack Reliability</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="window window--oracle" id="oracle-window">
+            <div class="window__bar">
+              <span>oracle_infrastructure.exe</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body oracle-layout">
+              <div class="oracle-layout__copy">
+                <p class="pixel-label">Current work</p>
+                <h2>Reliable infrastructure for AI hardware, GPU systems, and server platforms</h2>
+                <p class="pixel-copy">
+                  At Oracle, I build and scale reliable Python infrastructure for 50+ Intel, AMD,
+                  Ampere, NVIDIA, and Vera Rubin AI hardware and server platforms, increasing
+                  automated execution capacity 5× from 20,000 to 100,000 runs per quarter while
+                  accelerating new platform introduction and bring-up of next-generation AI
+                  infrastructure.
+                </p>
+                <p class="pixel-copy">
+                  I engineer infrastructure services with FastAPI, SQLAlchemy, and OpenSearch for
+                  planning, orchestration, and large-scale execution. I also build reusable platform
+                  infrastructure around firmware, BIOS, OpenBMC, PCIe, RDMA, NVMe/TCP, networking,
+                  storage, power, and service processor workflows that enable faster NPI bring-up and
+                  more reliable qualification across GPU and server platforms.
+                </p>
+              </div>
+              <div class="rack-art rack-art--stacked" aria-hidden="true">
+                <div class="rack-row rack-row--upper">
+                  <div class="rack-unit rack-unit--tall">
+                    <span class="rack-light rack-light--one"></span>
+                    <span class="rack-light rack-light--two"></span>
+                    <span class="rack-light rack-light--three"></span>
+                  </div>
+                  <div class="rack-unit rack-unit--tall">
+                    <span class="rack-light rack-light--two"></span>
+                    <span class="rack-light rack-light--four"></span>
+                    <span class="rack-light rack-light--five"></span>
+                  </div>
+                  <div class="rack-unit rack-unit--tall">
+                    <span class="rack-light rack-light--three"></span>
+                    <span class="rack-light rack-light--one"></span>
+                    <span class="rack-light rack-light--four"></span>
+                  </div>
+                </div>
+                <div class="rack-row rack-row--lower">
+                  <div class="rack-unit rack-unit--tall">
+                    <span class="rack-light rack-light--five"></span>
+                    <span class="rack-light rack-light--two"></span>
+                    <span class="rack-light rack-light--three"></span>
+                  </div>
+                  <div class="rack-unit rack-unit--tall">
+                    <span class="rack-light rack-light--one"></span>
+                    <span class="rack-light rack-light--four"></span>
+                    <span class="rack-light rack-light--five"></span>
+                  </div>
+                  <div class="rack-unit rack-unit--tall">
+                    <span class="rack-light rack-light--three"></span>
+                    <span class="rack-light rack-light--five"></span>
+                    <span class="rack-light rack-light--two"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="window window--reliability">
+            <div class="window__bar">
+              <span>observability.pkg</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">Observability</p>
+              <h3>Telemetry and monitoring infrastructure</h3>
+              <p class="pixel-copy">
+                I designed and deployed a containerized observability platform using Prometheus,
+                Grafana, Alertmanager, and Podman that centralized telemetry, automated
+                infrastructure health monitoring, and accelerated root-cause analysis.
+              </p>
+            </div>
+          </article>
+
+          <article class="window window--ai-tools">
+            <div class="window__bar">
+              <span>ai_tools.pkg</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">AI-powered tools</p>
+              <h3>Engineering infrastructure that reduces developer toil</h3>
+              <p class="pixel-copy">
+                I built AI-powered engineering tools for pull request analysis, review
+                summarization, approval readiness assessment, and action-plan generation.
+              </p>
+            </div>
+          </article>
+
+          <article class="window window--debug">
+            <div class="window__bar">
+              <span>reliability.log</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">Reliability</p>
+              <h3>I improve infrastructure reliability through systems debugging</h3>
+              <p class="pixel-copy">
+                A lot of my work shows up in diagnosing cross-stack failures spanning Linux,
+                hardware, firmware, networking, storage, and distributed systems through telemetry
+                analysis, log correlation, and system-level debugging.
+              </p>
+            </div>
+          </article>
+
+          <article class="window window--soft window--workstyle">
+            <div class="window__bar">
+              <span>how_i_work.txt</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">How I work</p>
+              <h2>I like being the engineer who can go deep technically without making the room feel heavier.</h2>
+              <p class="pixel-copy">
+                Helpfulness matters to me. That shows up in how I build, how I debug with others,
+                how I teach, and how I write. I want the software to be trustworthy and the
+                experience around it to feel clear and generous.
+              </p>
+            </div>
+          </article>
+
+          <article class="window window--soft window--purdue">
+            <div class="window__bar">
+              <span>purdue_research.doc</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">Purdue</p>
+              <h3>Research and teaching shaped how I think</h3>
+              <p class="pixel-copy">
+                My background includes Purdue systems research and teaching Data Structures and
+                Algorithms, which is a big part of why I care about rigor, readability, and being
+                useful to the people around me.
+              </p>
+            </div>
+          </article>
+
+          <article class="window window--soft window--research-feature">
+            <div class="window__bar">
+              <span>publications.db</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">Research</p>
+              <h3>Research that spans systems depth and applied ML</h3>
+              <div class="publication-list">
+                <article class="publication-card">
+                  <h4>dLSM - ICDE 2023</h4>
+                  <p class="pixel-copy">
+                    An LSM-based index for memory disaggregation over RDMA, focused on reducing
+                    overhead and pushing write throughput well beyond prior B-tree and LSM
+                    adaptations.
+                  </p>
+                </article>
+                <article class="publication-card">
+                  <h4>CNN-RNN ICH - IEEE 2021</h4>
+                  <p class="pixel-copy">
+                    A simultaneous detection, identification, and classification approach for
+                    intracranial hemorrhage using deep learning for high-stakes medical imaging.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </article>
+
+          <article class="window window--soft window--focus">
+            <div class="window__bar">
+              <span>projects.exe</span>
+              <div class="window__controls" aria-label="Window controls">
+                <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+              </div>
+            </div>
+            <div class="window__body">
+              <p class="pixel-label">Projects</p>
+              <div class="project-folders" aria-label="Project links">
+                <a class="project-folder" href="https://github.com/prishitakadam/Real-Time-Sudoku-Solver" target="_blank" rel="noreferrer">
+                  <span class="project-folder__icon" aria-hidden="true">
+                    <span class="project-folder__tab"></span>
+                    <span class="project-folder__stack project-folder__stack--one"></span>
+                    <span class="project-folder__stack project-folder__stack--two"></span>
+                    <span class="project-folder__body"></span>
+                  </span>
+                  <span class="project-folder__name">Real-Time-Sudoku-Solver</span>
+                </a>
+                <a class="project-folder" href="https://github.com/prishitakadam/TimberSaw2021" target="_blank" rel="noreferrer">
+                  <span class="project-folder__icon" aria-hidden="true">
+                    <span class="project-folder__tab"></span>
+                    <span class="project-folder__stack project-folder__stack--one"></span>
+                    <span class="project-folder__stack project-folder__stack--two"></span>
+                    <span class="project-folder__body"></span>
+                  </span>
+                  <span class="project-folder__name">TimberSaw2021</span>
+                </a>
+                <a class="project-folder" href="https://github.com/prishitakadam/CS536-Project" target="_blank" rel="noreferrer">
+                  <span class="project-folder__icon" aria-hidden="true">
+                    <span class="project-folder__tab"></span>
+                    <span class="project-folder__stack project-folder__stack--one"></span>
+                    <span class="project-folder__stack project-folder__stack--two"></span>
+                    <span class="project-folder__body"></span>
+                  </span>
+                  <span class="project-folder__name">CS536-Project</span>
+                </a>
+                <a class="project-folder" href="https://github.com/vsehra04/CS542_OCC_DistributedDatabase" target="_blank" rel="noreferrer">
+                  <span class="project-folder__icon" aria-hidden="true">
+                    <span class="project-folder__tab"></span>
+                    <span class="project-folder__stack project-folder__stack--one"></span>
+                    <span class="project-folder__stack project-folder__stack--two"></span>
+                    <span class="project-folder__body"></span>
+                  </span>
+                  <span class="project-folder__name">CS542_OCC_DistributedDatabase</span>
+                </a>
+                <a class="project-folder" href="https://github.com/prishitakadam/CS577_Project" target="_blank" rel="noreferrer">
+                  <span class="project-folder__icon" aria-hidden="true">
+                    <span class="project-folder__tab"></span>
+                    <span class="project-folder__stack project-folder__stack--one"></span>
+                    <span class="project-folder__stack project-folder__stack--two"></span>
+                    <span class="project-folder__body"></span>
+                  </span>
+                  <span class="project-folder__name">CS577_Project</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <div class="window-stack window-stack--blogs">
+            <article class="window window--link window--tech-link">
+              <div class="window__bar">
+                <span>tech_blog.exe</span>
+                <div class="window__controls" aria-label="Window controls">
+                  <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                  <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                  <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+                </div>
+              </div>
+              <div class="window__body">
+                <p class="pixel-label">Tech Blog</p>
+                <h3>Reliability engineering, orchestration, observability, backend platforms, and debugging across stack boundaries.</h3>
+                <a class="pixel-button pixel-button--light" href="tech-blog.html">Open tech.exe</a>
+              </div>
+            </article>
+
+            <article class="window window--link window--reading-link">
+              <div class="window__bar">
+                <span>reading_blog.exe</span>
+                <div class="window__controls" aria-label="Window controls">
+                  <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+                  <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+                  <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+                </div>
+              </div>
+              <div class="window__body">
+                <p class="pixel-label">Reading & Personal</p>
+                <h3>Books, reflection, and the gentler thoughts that sit beside all the systems work.</h3>
+                <a class="pixel-button pixel-button--light" href="reading-blog.html">Open reading.exe</a>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+    </main>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="app.js"></script>
+    <footer class="pixel-footer" id="contact">
+      <div class="shell pixel-footer__grid section-reveal">
+        <article class="window window--footer">
+          <div class="window__bar">
+            <span>contact.exe</span>
+            <div class="window__controls" aria-label="Window controls">
+              <button class="window__control" type="button" data-popup="minimize" aria-label="Minimize window">-</button>
+              <button class="window__control" type="button" data-popup="expand" aria-label="Expand window">o</button>
+              <button class="window__control" type="button" data-popup="close" aria-label="Close window">x</button>
+            </div>
+          </div>
+          <div class="window__body">
+            <p class="pixel-label">Let’s connect</p>
+            <h2>I’m at my best when I’m building useful systems with thoughtful people.</h2>
+            <div class="pixel-contact pixel-contact--icons">
+              <a class="pixel-contact__card" href="mailto:prishita.c.kadam@gmail.com">
+                <span class="pixel-contact__icon">@</span>
+                <span class="pixel-contact__text">
+                  <strong>Email</strong>
+                  <span>prishita.c.kadam@gmail.com</span>
+                </span>
+              </a>
+              <a class="pixel-contact__card" href="https://www.linkedin.com/in/prishitakadam/">
+                <span class="pixel-contact__icon">in</span>
+                <span class="pixel-contact__text">
+                  <strong>LinkedIn</strong>
+                  <span>/in/prishitakadam</span>
+                </span>
+              </a>
+              <a class="pixel-contact__card" href="https://github.com/prishitakadam">
+                <span class="pixel-contact__icon">gh</span>
+                <span class="pixel-contact__text">
+                  <strong>GitHub</strong>
+                  <span>github.com/prishitakadam</span>
+                </span>
+              </a>
+              <a class="pixel-contact__card" href="https://www.instagram.com/itsprishitaa/">
+                <span class="pixel-contact__icon">ig</span>
+                <span class="pixel-contact__text">
+                  <strong>Instagram</strong>
+                  <span>@itsprishitaa</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </footer>
 
+    <div class="pixel-popup" hidden aria-hidden="true">
+      <div class="pixel-popup__backdrop" data-popup-dismiss></div>
+      <section class="pixel-popup__window" role="dialog" aria-modal="true" aria-labelledby="pixel-popup-title">
+        <div class="window__bar">
+          <span>pixel_os.msg</span>
+          <div class="window__controls" aria-label="Dialog controls">
+            <button class="window__control" type="button" data-popup-dismiss aria-label="Close dialog">x</button>
+          </div>
+        </div>
+        <div class="window__body pixel-popup__body">
+          <div class="pixel-popup__cat" aria-hidden="true"></div>
+          <p class="pixel-label" id="pixel-popup-title">Pixel OS Notice</p>
+          <h3 class="pixel-popup__message">This window likes staying open.</h3>
+          <p class="pixel-copy pixel-popup__copy">Tiny pastel systems are happiest when everything stays neatly in place.</p>
+          <button class="pixel-button pixel-button--dark" type="button" data-popup-dismiss>okay.exe</button>
+        </div>
+      </section>
+    </div>
 
-    </body>
-
+    <script src="js/site.js"></script>
+  </body>
 </html>

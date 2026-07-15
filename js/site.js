@@ -76,10 +76,21 @@ if ("IntersectionObserver" in window) {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.16 }
+    {
+      threshold: 0.01,
+      rootMargin: "0px 0px 18% 0px"
+    }
   );
 
-  revealElements.forEach((element) => revealObserver.observe(element));
+  revealElements.forEach((element) => {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 1.1 && rect.bottom > 0) {
+      element.classList.add("is-visible");
+      return;
+    }
+
+    revealObserver.observe(element);
+  });
 } else {
   revealElements.forEach((element) => element.classList.add("is-visible"));
 }

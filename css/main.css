@@ -905,7 +905,7 @@ ul {
   background: rgba(255, 249, 239, 0.75);
 }
 
-.section-reveal {
+.js .section-reveal {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 450ms ease, transform 450ms ease;
@@ -914,6 +914,12 @@ ul {
 .section-reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.section-reveal.is-visible.window {
+  animation: window-pop 420ms steps(10, end);
+  animation-delay: var(--window-delay, 0ms);
+  animation-fill-mode: both;
 }
 
 .section-reveal.is-visible .window {
@@ -1253,8 +1259,7 @@ body.popup-open {
 }
 
 .oracle-layout__copy .pixel-copy {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 .rack-art {
@@ -1305,6 +1310,32 @@ body.popup-open {
 .rack-unit--tall {
   width: 60px;
   height: 134px;
+}
+
+@media (max-width: 720px) {
+  .oracle-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .rack-art--stacked {
+    min-height: auto;
+    padding: 0.2rem 0 0;
+  }
+
+  .rack-row {
+    gap: 0.45rem;
+  }
+
+  .rack-row--lower {
+    margin-left: 0;
+  }
+
+  .rack-unit--tall {
+    width: 52px;
+    height: 118px;
+  }
 }
 
 .rack-light {

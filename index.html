@@ -72,13 +72,12 @@
                 <div class="pixel-spirit pixel-spirit--one" aria-hidden="true"></div>
                 <div class="pixel-spirit pixel-spirit--two" aria-hidden="true"></div>
                 <div class="pixel-spirit pixel-spirit--three" aria-hidden="true"></div>
-                <div class="pixel-cat pixel-cat--sleepy">
-                  <div class="pixel-cat__ears"></div>
-                  <div class="pixel-cat__head"></div>
-                  <div class="pixel-cat__body"></div>
-                  <div class="pixel-cat__tail"></div>
-                </div>
-                <p class="pixel-caption">easygoing, kind, and very serious about making complex systems easier for other engineers to trust</p>
+                <img
+                  class="pixel-cat-portrait"
+                  src="images/siamese-cat-portrait.png"
+                  alt="Cute Siamese cat portrait representing Prishita"
+                >
+                <p class="pixel-caption">easygoing, thoughtful, and serious about making complex systems easier for other engineers to trust</p>
               </div>
             </article>
 
@@ -543,22 +542,43 @@
 
     <div class="pixel-popup" hidden aria-hidden="true">
       <div class="pixel-popup__backdrop" data-popup-dismiss></div>
-      <section class="pixel-popup__window" role="dialog" aria-modal="true" aria-labelledby="pixel-popup-title">
+      <section class="pixel-popup__window" role="dialog" aria-modal="true" aria-labelledby="pixel-popup-message">
         <div class="window__bar">
-          <span>pixel_os.msg</span>
+          <span>prishita_os.msg</span>
           <div class="window__controls" aria-label="Dialog controls">
             <button class="window__control" type="button" data-popup-dismiss aria-label="Close dialog">x</button>
           </div>
         </div>
         <div class="window__body pixel-popup__body">
-          <div class="pixel-popup__cat" aria-hidden="true"></div>
-          <p class="pixel-label" id="pixel-popup-title">Pixel OS Notice</p>
-          <h3 class="pixel-popup__message">This window likes staying open.</h3>
+          <img
+            class="pixel-popup__cat"
+            src="images/siamese-cat-portrait.png"
+            alt=""
+            aria-hidden="true"
+          >
+          <h3 class="pixel-popup__message" id="pixel-popup-message">This window likes staying open.</h3>
           <p class="pixel-copy pixel-popup__copy">Tiny pastel systems are happiest when everything stays neatly in place.</p>
-          <button class="pixel-button pixel-button--dark" type="button" data-popup-dismiss>okay.exe</button>
+          <button class="pixel-button pixel-button--dark" type="button" data-popup-dismiss>okay</button>
         </div>
       </section>
     </div>
+
+    <section class="pixel-taskbar-wrap" aria-label="Minimized windows">
+      <div class="pixel-taskbar">
+        <img
+          class="pixel-taskbar__cat"
+          src="images/taskbar-sleeping-cat.png"
+          alt=""
+          aria-hidden="true"
+        >
+        <div class="pixel-taskbar__apps" data-taskbar-apps></div>
+        <div class="pixel-taskbar__clock" aria-live="polite">
+          <span class="pixel-taskbar__clock-date" data-taskbar-date></span>
+          <span class="pixel-taskbar__clock-time" data-taskbar-time></span>
+        </div>
+      </div>
+      <div class="pixel-taskbar__tooltip" data-taskbar-tooltip hidden></div>
+    </section>
 
     <script src="js/site.js"></script>
   </body>
